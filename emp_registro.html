@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>registro de empleados</title>
+        <link type="text/css" rel="stylesheet" href="css/validity.css" />
+        <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+        <script src="js/validity.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#form_emp").validity(function() {
+                    $("#e_id, #e_username, #e_passwd, #e_passwd_confirm, #e_fname, #e_sname, #e_fsurname, #e_ssurname, #e_age, #e_dui, #e_isss, #e_nit, #e_nup, #e_status, #e_address, #e_phone, #e_cellphone, #e_mail, #e_depto, #e_position, #e_hired").require();
+                });
+            })
+        </script>
+    </head>
+
+    <body>
+        <table width="500" cellspacing="1" cellpadding="3" border="0" bgcolor="#ffffff" align="center">
+            <tr><th>TRASPORTES Y SERVICIOS ALTUVE S.A</th></tr>
+        </table>
+
+        <table width="500" cellspacing="1" cellpadding="3" border="0" bgcolor="#ffffff" align="center"> 
+            <tr>    
+                <th bgcolor="#1875D2"> 
+                    <b>REGISTRO DE EMPLEADO</b>    
+                </th> 
+            </tr> 
+            <tr>    
+                <td bgcolor="#3B94ED">
+                    <form id="form_emp" method="post" enctype="text/plain">
+                        <table>
+                            <tr><th align="left">Id:</th><th align="left"><input type="text" value="" id="e_id" name="id" size="15" maxlength="50" title="ID"></th></tr>
+                            <tr><th align="left">Usuario:</th> <th align="left"><input type="text" id="e_username" name="usuario" size="25" maxlength="50" title="Usuario"></th></tr>
+                            <tr><th align="left">Contraseña:</th> <th align="left"><input type="text" id="e_passwd" name="password" size="25" maxlength="50" title="Password"></th></tr>
+                            <tr><th align="left">Vuelva a escribir Contraseña:</th> <th align="left"><input id="e_passwd_confirm" type="text" name="c_pswd" title="Confirmacion Password" size="25" maxlength="50"></th></tr>
+                            <tr><th align="left">Primer Nombre:</th> <th align="left"><input type="text" id="e_fname" name="p_nombre" size="25" maxlength="50" title="Primer Nombre"></th></tr>
+                            <tr><th align="left">Segundo Nombre:</th> <th align="left"> <input type="text" id="e_sname" name="s_nombre" size="25" maxlength="50" title="Segundo nombre"></th></tr>
+                            <tr><th align="left">Primer Apellido:</th> <th align="left"><input type="text" id="e_fsurname" name="p_apellido" size="25" maxlength="100" title="Apellido"></th></tr>
+                            <tr><th align="left">Segundo Apellido:</th><th align="left"> <input type="text" id="e_ssurname" name="s_apellido" size="25" maxlength="100" title="segundo Apellido"></th></tr>
+                            <tr><th align="left">Edad:</th><th align="left"> <input type="text" name="edad" id="e_age" size="15" maxlength="50" title="Edad"> A&ntilde;os Cumplidos</th></tr>
+                            <tr><th align="left">Numero de DUI:</th><th align="left"> <input type="text" id="e_dui" name="n_dui" size="15" maxlength="50" title="DUI"></th></tr>
+                            <tr><th align="left">Numero de NIT:</th><th align="left"> <input type="text" id="e_nit" name="nit" size="15" maxlength="50" title="NIT"></th></tr>
+                            <tr><th align="left">Numero de ISSS:</th><th align="left"> <input type="text" id="e_isss" name="isss" size="15" maxlength="50" title="ISSS"></th></tr>
+                            <tr><th align="left" >Numero de NUP:</th><th align="left"> <input type="text" id="e_nup" name="nup" size="15" maxlength="50" title="NUP"></th></tr>
+                            <tr><th align="left" >Estado Civil:</th><th align="left"> <input type="text" id="e_status" name="e_civil" size="15" maxlength="50" title="Estado Civil"></th></tr>
+                            <tr><th align="left">Direccion:</th><th align="left"> <input type="text" id="e_address" name="direccion" size="50" maxlength="50" title="Direccion"></th></tr>
+                            <tr><th align="left">Telefono Fijo:</th><th align="left" > <input type="text" id="e_phone" name="n_telefonofijo" size="15" maxlength="50" title="Telefono"></th></tr>
+                            <tr><th align="left">Telefono Movil:</th><th align="left"> <input type="text" id="e_cellphone" name="n_telefonomovil" size="15" maxlength="50" title="Movil"></th></tr>
+                            <tr><th align="left">Correo electrónico:</th><th align="left"><input type="text" id="e_mail" name="correo" size="40" maxlength="100" title="Email"></th></tr>
+                            <tr><th align="left">Departamento Asignado:</th><th align="left"><input type="text" id="e_depto" value="" name="depto" size="40" maxlength="50" title="Departamento"></th></tr>
+                            <tr><th align="left">Cargo:</th><th align="left"><input type="text" value="" name="cargo" id="e_position" size="40" maxlength="50" title="Cargo"></th></tr>
+                            <tr><th align="left">Fecha de Ingreso:</th><th align="left"><input type="text" id="e_hired" name="f_ingreso" size="40" maxlength="50" title="Fecha Ingreso"></th></tr>
+                        </table>
+
+                        <br>
+                        <br>
+                        <table width="50%" border="0" align="center" cellpadding="10" cellspacing="0">
+                            <tr>
+                                <td><div align="center">
+                                        <input type="submit" value="Enviar formulario">
+                                    </div></td>
+                                <td><div align="center">
+                                        <input type="Reset" value="Modificar formulario">
+                                    </div></td>
+                                <td><div align="center">
+                                        <input type="submit" value="Borrar formulario">
+                                    </div></td>
+                            </tr>
+                        </table>
+                    </form>
+
+                </td> </tr> </table>
+
+    </body>
+</html>
