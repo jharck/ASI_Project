@@ -1,6 +1,8 @@
 <?php
-include 'clases/cConexion.php';
+include 'cConexion.php';
   //instanciación de la clase conexión a postgresql.
+$usuario = $_REQUEST['Username'];
+$password = $_REQUEST['Password'];
                 $conexion = new cConexion();
                 $conexion->conectar();
                 if($conexion->conectar()==true){
@@ -22,12 +24,21 @@ class cSeguridad {
     //put your code here
     //Instanciando la coneccion
     public $mensaje;
-    public function login($usuario,$clave){
+    public function login($usuario,$password){
     $conn = $conexion->url;
-    $result = pg_query($conn, "SELECT * FROM user_acceso('$usuario','$clave')");
+    $result = pg_query($conn, "SELECT * FROM user_acceso('$usuario','$password )");
     $this->mensaje=$result;
-    }
-
+                    $arr = pg_fetch_array($result, 0, PGSQL_NUM);
+                $arr[6];
+                if($arr[6]){
+                    echo "<script language=\"javascript\">
+window.location.href=\"index.php\";
+</script>";
+                }else{
+               $data['error']="$result";
+               $this->load->view('login',$data); 
+               return $data;
+                }
 }
-
+}
 ?>

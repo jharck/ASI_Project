@@ -5,10 +5,10 @@
 <!-- BEGIN HEAD -->
 <head>
    <meta charset="utf-8" />
-   <title>Consultar Veh&iacute;culo</title>
+   <title>Metro Lab</title>
    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
    <meta content="" name="description" />
-   <meta content="" name="author" />
+   <meta content="Mosaddek" name="author" />
    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
    <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
    <link href="assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
@@ -16,10 +16,8 @@
    <link href="css/style.css" rel="stylesheet" />
    <link href="css/style-responsive.css" rel="stylesheet" />
    <link href="css/style-default.css" rel="stylesheet" id="style_color" />
-
-    <link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/uniform/css/uniform.default.css" />
-
+   <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+   <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -147,7 +145,7 @@
                                    <a href="#">
                                        <span class="photo"><img src="img/avatar-mini.png" alt="avatar" /></span>
 									<span class="subject">
-									<span class="from">Administrador</span>
+									<span class="from">Jhon Doe</span>
 									<span class="time">10 mins</span>
 									</span>
 									<span class="message">
@@ -260,7 +258,7 @@
                        <li class="dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                <img src="img/avatar1_small.jpg" alt="">
-                               <span class="username">Administrador</span>
+                               <span class="username">Jhon Doe</span>
                                <b class="caret"></b>
                            </a>
                            <ul class="dropdown-menu extended logout">
@@ -278,269 +276,5 @@
        <!-- END TOP NAVIGATION BAR -->
    </div>
    <!-- END HEADER -->
-   <!-- BEGIN CONTAINER -->
-   <div id="container" class="row-fluid">
-      <!-- BEGIN SIDEBAR -->
-      <div class="sidebar-scroll">
-          <div id="sidebar" class="nav-collapse collapse">
 
-              <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-              <div class="navbar-inverse">
-                  <form class="navbar-search visible-phone">
-                      <input type="text" class="search-query" placeholder="Search" />
-                  </form>
-              </div>
-              <!-- END RESPONSIVE QUICK SEARCH FORM -->
-              <!-- BEGIN SIDEBAR MENU -->
-              <ul class="sidebar-menu">
-			  
-			  
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon-cogs"></i>
-                          <span>Veh&iacute;culos</span>
-                          <span class="arrow"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="agregar_vehiculo.html">Agregar Veh&iacute;culo</a></li>
-                          <li><a class="" href="consultar_vehiculo.html">Consultar Veh&iacute;culo</a></li>
-                      </ul>
-                  </li>				  
-                 
-                  <li>
-                      <a class="" href="login.html">
-                          <i class="icon-user"></i>
-                          <span>Login Page</span>
-                      </a>
-                  </li>
-                  
-
-              </ul>
-              <!-- END SIDEBAR MENU -->
-          </div>
-      </div>
-      <!-- END SIDEBAR -->
-      <!-- BEGIN PAGE -->  
-      <div id="main-content">
-         <!-- BEGIN PAGE CONTAINER-->
-         <div class="container-fluid">
-            <!-- BEGIN PAGE HEADER-->   
-            <div class="row-fluid">
-               <div class="span12">
-                   <!-- BEGIN THEME CUSTOMIZER-->
-                   <div id="theme-change" class="hidden-phone">
-                       <i class="icon-cogs"></i>
-                        <span class="settings">
-                            <span class="text">Theme Color:</span>
-                            <span class="colors">
-                                <span class="color-default" data-style="default"></span>
-                                <span class="color-green" data-style="green"></span>
-                                <span class="color-gray" data-style="gray"></span>
-                                <span class="color-purple" data-style="purple"></span>
-                                <span class="color-red" data-style="red"></span>
-                            </span>
-                        </span>
-                   </div>
-                   <!-- END THEME CUSTOMIZER-->
-                  <!-- BEGIN PAGE TITLE & BREADCRUMB-->
-                   <h3 class="page-title">
-                     Consultar Veh&iacute;culo
-                   </h3>
-                   <ul class="breadcrumb">
-                       <li>
-                           <a href="#">Home</a>
-                           <span class="divider">/</span>
-                       </li>
-                       <li>
-                           <a href="#">Veh&iacute;culos</a>
-                           <span class="divider">/</span>
-                       </li>
-                       <li class="active">
-                           Consultar Veh&iacute;culo
-                       </li>
-                       <li class="pull-right search-wrap">
-                           <form action="http://thevectorlab.net/metrolab/search_result.html" class="hidden-phone">
-                               <div class="input-append search-input-area">
-                                   <input class="" id="appendedInputButton" type="text">
-                                   <button class="btn" type="button"><i class="icon-search"></i> </button>
-                               </div>
-                           </form>
-                       </li>
-                   </ul>
-                   <!-- END PAGE TITLE & BREADCRUMB-->
-               </div>
-            </div>
-            <!-- END PAGE HEADER-->
-            <!-- BEGIN ADVANCED TABLE widget-->
-            <div class="row-fluid">
-                <div class="span12">
-                <!-- BEGIN EXAMPLE TABLE widget-->
-                <div class="widget red">
-                    <div class="widget-title">
-                        <h4><i class="icon-reorder"></i> Datos</h4>
-                            <span class="tools">
-                                <a href="javascript:;" class="icon-chevron-down"></a>
-                                <a href="javascript:;" class="icon-remove"></a>
-                            </span>
-                    </div>
-                    <div class="widget-body">
-						
-                        <table class="table table-striped table-bordered" id="sample_1">
-                            <thead>
-                            <tr>
-                                <th>Placa</th>
-                                <th class="hidden-phone">Tipo</th>
-                                <th class="hidden-phone">Motorista</th>
-                                <th class="hidden-phone">Vendedor</th>
-                                <th class="hidden-phone">Ruta</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="odd gradeX">
-                                <td>P48-256</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Juan Perez</td>
-                                <td class="hidden-phone">Hector Portillo</td>
-                                <td class="hidden-phone">Ilopango</td>
-                            </tr>
-                            <tr class="odd gradeX">
-                                <td>P24-569</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Juan Molina</td>
-                                <td class="hidden-phone">Edwin Portillo</td>
-                                <td class="hidden-phone">Soyapango</td>
-                            </tr>
-                            <tr class="odd gradeX">
-
-                                <td>P369-524</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Jose Mendez</td>
-                                <td class="hidden-phone">Cesar Molina</td>
-                                <td class="hidden-phone">Cojutepeque</td>
-                            </tr>
-                            <tr class="odd gradeX">
-                                
-                                <td>P56-965</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Jorge Molina</td>
-                                <td class="hidden-phone">Julio Martinez</td>
-                                <td class="hidden-phone">Santa Ana</td>
-                            </tr>
-                            <tr class="odd gradeX">
-                                
-                                <td>P69-652</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Raul Hernandez</td>
-                                <td class="hidden-phone">Elmer Ramirez</td>
-                                <td class="hidden-phone">Santa Tecla</td>
-                            </tr>
-                            <tr class="odd gradeX">
-                                
-                                <td>P78-695</td>
-								<td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Luis Coto</td>
-                                <td class="hidden-phone">Douglas Alfaro</td>
-                                <td class="hidden-phone">La libertad</td>
-                            </tr>
-                            <tr class="odd gradeX">
-                                
-                                <td>P695-625</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Mario Molina</td>
-                                <td class="hidden-phone">Otoniel Mendez</td>
-                                <td class="hidden-phone">San Marcos</td>
-                            </tr>
-							
-                            <tr class="odd gradeX">
-                                
-                                <td>P695-625</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Cesar Perez</td>
-                                <td class="hidden-phone">Jose Alfaro</td>
-                                <td class="hidden-phone">Antiguo Cuscatlan</td>
-                            </tr>
-
-							<tr class="odd gradeX">
-                                
-                                <td>P695-625</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Juan Pena</td>
-                                <td class="hidden-phone">Walter Carranza</td>
-                                <td class="hidden-phone">San Marcos</td>
-                            </tr>
-							
-                            <tr class="odd gradeX">
-                                
-                                <td>P695-625</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Milton Molina</td>
-                                <td class="hidden-phone">Silvia Martinez</td>
-                                <td class="hidden-phone">San Salvador</td>
-                            </tr>
-
-                            <tr class="odd gradeX">
-                                
-                                <td>P695-625</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Cesar Pacheco</td>
-                                <td class="hidden-phone">Saul Mendez</td>
-                                <td class="hidden-phone">Mejicanos</td>
-                            </tr>
-
-							<tr class="odd gradeX">
-                                
-                                <td>P695-625</td>
-                                <td class="hidden-phone">Liviano</td>
-                                <td class="hidden-phone">Jose Perez</td>
-                                <td class="hidden-phone">Hector Rivera</td>
-                                <td class="hidden-phone">Mariona</td>
-                            </tr>
-                           
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- END EXAMPLE TABLE widget-->
-                </div>
-            </div>
-
-            <!-- END ADVANCED TABLE widget-->
-         </div>
-         <!-- END PAGE CONTAINER-->
-      </div>
-      <!-- END PAGE -->  
-   </div>
-   <!-- END CONTAINER -->
-
-   <!-- BEGIN FOOTER -->
-   <div id="footer">
-       2013 &copy; Metro Lab Dashboard.
-   </div>
-   <!-- END FOOTER -->
-
-   <!-- BEGIN JAVASCRIPTS -->
-   <!-- Load javascripts at bottom, this will reduce page load time -->
-   <script src="js/jquery-1.8.3.min.js"></script>
-   <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-   <script src="js/jquery.blockui.js"></script>
-   <!-- ie8 fixes -->
-   <!--[if lt IE 9]>
-   <script src="js/excanvas.js"></script>
-   <script src="js/respond.js"></script>
-   <![endif]-->
-   <script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>
-   <script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
-   <script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>
-
-
-   <!--common script for all pages-->
-   <script src="js/common-scripts.js"></script>
-
-   <!--script for this page only-->
-   <script src="js/dynamic-table.js"></script>
    
-   <!-- END JAVASCRIPTS -->   
-</body>
-<!-- END BODY -->
-</html>

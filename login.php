@@ -1,32 +1,3 @@
-<?php
-/*include 'clases/cConexion.php';
-  //instanciación de la clase conexión a postgresql.
-                $conexion = new cConexion();
-                $conexion->conectar();
-                if($conexion->conectar()==true){
-                        echo "conexion exitosa";
-                        }else{
-                                echo "no se pudo conectar";
-                        }
-                $conn = $conexion->url;
-                $result = pg_query($conn, "SELECT * FROM user_acceso('galonso','123')"); 
-                $arr = pg_fetch_array($result, 0, PGSQL_NUM);
-                $arr[6];
-                if($arr[6]){
-                    echo "<script language=\"javascript\">
-window.location.href=\"index.php\";
-</script>";
-                }else{
-                    echo '$result';
-                }*/
-
-             /* include 'clases/cSeguridad.php';
-              $login = new cSeguridad();
-              $user = $_REQUEST['Username'];
-              $clave = $_REQUEST['Password'];
-              $login->login($user,$clave);
-              echo $login->mensaje; */
-?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -50,9 +21,7 @@ window.location.href=\"index.php\";
 <body class="lock">
     <div class="lock-header">
         <!-- BEGIN LOGO -->
-        <a class="center" id="logo" href="#">
-            <img class="center" alt="logo" src="img/logo.png">
-        </a>
+
         <!-- END LOGO -->
     </div>
     <div class="login-wrap">
@@ -63,7 +32,7 @@ window.location.href=\"index.php\";
             </div>
         </div>
         <div class="metro double-size green">
-            <form action="log.php">
+            <form action="clogin.php">
                 <div class="input-append lock-input">
                     <input type="text" name="Username" class="" placeholder="Username">
                 </div>
@@ -85,11 +54,8 @@ window.location.href=\"index.php\";
             </form>
         </div>
         <div class="login-footer">
-            <div class="remember-hint pull-left">
-                <input type="checkbox" id=""> Remember Me
-            </div>
-            <div class="forgot-hint pull-right">
-                <a id="forget-password" class="" href="javascript:;">Forgot Password?</a>
+          <div class="forgot-hint pull-right">
+              <a id="forget-password" class="" href="javascript:;"><h3>¿Ha olvidado su contraseña?</h3></a>
             </div>
         </div>
     </div>
